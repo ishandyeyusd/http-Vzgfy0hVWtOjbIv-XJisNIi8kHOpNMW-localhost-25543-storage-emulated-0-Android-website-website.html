@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moogold Gift Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Moogold Gift Cards</h1>
+    </header>
+
+    <section id="gift-cards">
+        <h2>Select Your Moogold Gift Card</h2>
+
+        <div class="card-container">
+            <div class="card" onclick="selectCard(500)">
+                <h3>500 Moogold</h3>
+                <p>Price: ₹495</p>
+            </div>
+            <div class="card" onclick="selectCard(1000)">
+                <h3>1000 Moogold</h3>
+                <p>Price: ₹990</p>
+            </div>
+            <div class="card" onclick="selectCard(1500)">
+                <h3>1500 Moogold</h3>
+                <p>Price: ₹1485</p>
+            </div>
+        </div>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+        <br><br>
+
+        <button id="buy-now">Buy Now</button>
+    </section>
+
+    <section id="summary" style="display: none;">
+        <h2>Order Summary</h2>
+        <div id="summary-card">
+            <p id="selected-gift-card"></p>
+            <p id="selected-quantity"></p>
+            <p id="total-amount"></p>
+            <button onclick="initiatePayment(totalAmount)">Proceed to Payment</button>
+            <button onclick="closeSummary()">Cancel</button>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
